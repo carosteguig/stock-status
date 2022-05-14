@@ -1,17 +1,11 @@
 // TEXT STYLES MIXINS
 
 // mobile
-@mixin page-header__mobile {
-    font-family: "Impact";
-    font-size: 3rem;
-    font-weight: normal;
-    line-height: 3rem;
-}
 
 @mixin section-header__mobile {
     font-family: "Noto Sans";
-    font-size: 1.75rem;
-    font-weight: normal;
+    font-size: 1.25rem;
+    font-weight: bold;
     line-height: 2.25rem;  
 }
 
@@ -46,17 +40,10 @@
 
 //tablet-desktop
 
-@mixin page-header__tablet-desktop {
-    font-family: "Impact";
-    font-size: 3.25rem;
-    font-weight: normal;
-    line-height: 3rem;
-}
-
 @mixin section-header__tablet-desktop {
     font-family: "Noto Sans";
-    font-size: 2.25rem;
-    font-weight: normal;
+    font-size: 1.75rem;
+    font-weight: bold;
     line-height: 2.55rem;
 }
 
