@@ -7,18 +7,18 @@
 
 
     &__title {
-        @include section-header__mobile;
+        @include subheader__mobile;
         color: $primary__color--text;
         text-align: center;
-        padding: 1rem 0;
+        padding: 1.25rem 0;
 
         -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 4px .5px;
         -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 4px .5px;
         box-shadow: rgba(0, 0, 0, 0.3) 0px -1px 4px .5px;
 
         @include tablet {
-            @include section-header__tablet-desktop;
-            padding: 1.25rem 0;
+            @include subheader__tablet-desktop;
+            padding: 1.5rem 0;
 
 
             @include desktop {

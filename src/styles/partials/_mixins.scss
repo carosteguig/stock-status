@@ -4,14 +4,14 @@
 
 @mixin section-header__mobile {
     font-family: "Noto Sans";
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     font-weight: bold;
     line-height: 2.25rem;  
 }
 
 @mixin subheader__mobile {
     font-family: "Noto Sans";
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 500;
     line-height: 1.5rem;  
     letter-spacing: 0.005px;
@@ -42,23 +42,16 @@
 
 @mixin section-header__tablet-desktop {
     font-family: "Noto Sans";
-    font-size: 1.75rem;
+    font-size: 2.25rem;
     font-weight: bold;
     line-height: 2.55rem;
 }
 
 @mixin subheader__tablet-desktop {
     font-family: "Noto Sans";
-    font-size: 1.25rem;
-    font-weight: 500;
+    font-size: 1.75rem;
+    font-weight: bold;
     line-height: 1.375rem;
-}
-
-@mixin project-header__tablet-desktop {
-    font-family: 'Impact';
-    font-size: 2rem;
-    font-weight: normal;
-    line-height: 2rem;  
 }
 
 @mixin body__tablet-desktop {

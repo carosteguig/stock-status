@@ -3,7 +3,7 @@ import React from 'react';
 import { Component } from 'react';
 import Card from '../../components/Card/Card';
 import axios from 'axios';
-import Card from '../../components/Card/Card';
+
 
 
 export default class Home extends Component {
@@ -12,16 +12,34 @@ export default class Home extends Component {
     paints: []
 }
 
+componentDidMount() {
+    this.getAllPaints();
+}
+
+getAllPaints() {
+    axios
+    .get(`${process.env.REACT_APP_API_URL}/paints`)
+    .then((res) => {
+        console.log(res);
+        this.setState({
+            paints: res.data,
+        });
+        let paintAmount = this.props.match.params.quantity;
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+}
 
 
     render() {
 
-        console.log(paintArr);
+        // console.log(paintArr);
 
         return(
             <main className='main'>
                 <h1 className='main__title'>Paint Stock</h1>
-                <section cardName='main__cards'>
+                <section className='main__cards'>
                     <Card 
                        key='1' 
                        title='Available'

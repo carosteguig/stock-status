@@ -1,14 +1,14 @@
 import './Card.scss';
 import { Link } from 'react-router-dom';
 
-export default function Crads() {
+export default function Card(props) {
 
     return (
         <>
-            <div className='card__container'>
-                <h3 className='card__title'>Available</h3>
+            <div className='card'>
+                <h3 className='card__title'>{props.title}</h3>
                 <section className='card__content'>
-                    <ul className='card__item'>
+                    <ul className='card__list'>
 
                     </ul>
                 </section>

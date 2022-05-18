@@ -1,0 +1,28 @@
+@import '../../styles/partials/mixins';
+@import '../../styles/partials/variables';
+
+
+
+.main {
+    padding: 5rem 0 4rem 0;
+
+    &__title {
+    @include section-header__mobile;
+    color: $primary__color--text;
+    text-align: center;
+    padding: 0 0 4rem 0;
+
+    @include tablet {
+        @include section-header__tablet-desktop;
+    }
+
+    }
+
+
+    &__cards {
+        @include display-flex(row, center, center);
+        flex-wrap: wrap;
+        gap: 4rem;
+
+    }
+}
