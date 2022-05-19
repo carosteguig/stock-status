@@ -2,17 +2,30 @@ import './Edit.scss';
 import React from 'react';
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 export default class Edit extends Component {
 
     state = {
-        paintItem: {
-
-        }
+        paintItem: {}
     }
 
     componentDidMount() {
-        this.getPaintItem();
+        this.getPaintDetails();
+    }
+
+
+    getPaintDetails() {
+        axios
+        .get(`${process.env.REACT_APP_API_URL}/paints/${this.props.match.params.id}`)
+        console.log(this.props.match.params.id)
+        .then(res => {
+           console.log(res);
+           this.setState()
+        })
+        .catch(error => {
+            console.log(error);
+        })
     }
 
     render() {
