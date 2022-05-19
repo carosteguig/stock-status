@@ -22,48 +22,48 @@ getAllPaints() {
     .then((res) => {
         console.log(res);
         this.setState({
-            paints: res.data,
+            paints: res.data,     
         });
-        let paintAmount = this.props.match.params.quantity;
+        // let paintNum = this.props.match.params.quantity;
+        // if (10 < paintNum) {
+        //     let paintNumAv = paintNum;
+        // } else if (0 < paintNum) {
+        //     let paintNumLow = paintNum;
+        // } else {
+        //     let paintNumOut = paintNum;
+        // }
+
     })
-    .catch((err) => {
-        console.log(err);
+    .catch((error) => {
+        console.log(error);
     });
 }
 
 
     render() {
-
-        // console.log(paintArr);
+        
+        console.log(this.props);
 
         return(
             <main className='main'>
                 <h1 className='main__title'>Paint Stock</h1>
                 <section className='main__cards'>
                     <Card 
-                       key='1' 
-                       title='Available'
-                       items='blue'
-                       quantity='100'
-
+                        arrayPaints= {this.state.paints}
+                        title='Available'
                     />
+
                    <Card 
-                       key='2' 
-                       title='Running Low'
-                       items='reed'
-                       quantity='9'
-
+                        arrayPaints= {this.state.paints}
+                        title='Running Low'
                     />
-                    <Card 
-                       key='3' 
-                       title='Out of Stock'
-                       items='black'
-                       quantity='0'
 
+                    <Card 
+                        arrayPaints= {this.state.paints}
+                        title='Out of Stock'
                     />
                 </section>
-
-
+             
             </main>
         );
     }

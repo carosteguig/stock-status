@@ -5,8 +5,10 @@
 .card {
     width: 80%;
     max-width: 20.125rem;
-    height: 15rem;
-    border-radius: 2rem;
+    // height: 15rem;
+    border-radius: 1.25rem;
+    padding: 2rem 0 1.5rem 0;
+    background-color: $primary__color--bkgd;
 
     // under shadow style
     -webkit-box-shadow: rgba(0, 0, 0, 0.3) 2.4px 2.4px 3.2px;
@@ -14,10 +16,61 @@
     box-shadow: rgba(0, 0, 0, 0.125) 1px 1px 3.2px;
 
 
+    &__content {
+        @include display-flex(row, center, none);
+    }
+
+
     &__title {
         @include subheader__mobile;
         text-align: center;
-        padding: 1.5rem;
+        padding-bottom: 1.5rem;
+        color: $primary__color--text;
+
+        @include tablet {
+            @include subheader__tablet-desktop;
+        }
+    }
+
+    &__list {
+        width: 50%;
+        @include body__mobile;
+        color: $primary__color--text;
+
+        @include tablet {
+            @include body__tablet-desktop;
+        }
+
+        &--left {
+            padding-left: 2rem;
+            text-align: left;
+        }
+
+        &--right {
+            padding-right: 2rem;
+            text-align: right;
+        }
+
+    }
+
+
+    &__item {
+        padding: 1rem 0 0.5rem 0;
+        border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.125);
+
+
+        &-container {
+            @include display-flex(row, space-between, none);
+        }
+
+        &-button {
+            @include labels-buttons__mobile;
+            color: $primary__color--cta-active;
+
+            @include tablet {
+                @include labels-buttons__tablet-desktop;
+            }
+        }
     }
 
 }

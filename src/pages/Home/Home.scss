@@ -4,7 +4,9 @@
 
 
 .main {
-    padding: 5rem 0 4rem 0;
+    padding: 4rem 0 4rem 0;
+    // height: 100vh;
+    background-color: $primary__color--second-text;
 
     &__title {
     @include section-header__mobile;
