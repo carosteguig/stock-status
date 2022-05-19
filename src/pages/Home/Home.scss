@@ -7,6 +7,11 @@
     padding: 4rem 0 4rem 0;
     // height: 100vh;
     background-color: $primary__color--second-text;
+    @include tablet {
+        padding: 5rem 2rem;
+    }
+
+    
 
     &__title {
     @include section-header__mobile;
@@ -22,7 +27,7 @@
 
 
     &__cards {
-        @include display-flex(row, center, center);
+        @include display-flex(row, center, flex-start);
         flex-wrap: wrap;
         gap: 4rem;
 

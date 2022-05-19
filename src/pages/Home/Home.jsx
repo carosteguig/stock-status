@@ -23,22 +23,7 @@ export default class Home extends Component {
                 console.log(res);
                 this.setState({
                     paints: res.data,
-
                 });
-                // console.log(res.data.quantity);   
-                // let paintNum = res.data.quantity.map(paintAmount => (
-                //     paintAmount = paintAmount.quantity
-
-                // ));
-                // console.log(paintAmount)
-                //         if (10 < paintNum) {
-                //             paintNumAv = paintNum;
-                //         } else if (0 < paintNum) {
-                //             paintNumLow = paintNum;
-                //         } else {
-                //             paintNumOut = paintNum;
-                //         }
-
             })
             .catch((error) => {
                 console.log(error);
@@ -50,14 +35,21 @@ export default class Home extends Component {
 
     render() {
 
+        // console.log(this.props)
+
+
+        // filtering the paints from the array. Directing the paints with over 10 in quantity to available
         let avalPaints = this.state.paints.filter(paintAmount => paintAmount.quantity > 10);
         avalPaints.sort();
         
+        // filtering the paints from the array. Directing the paints with under 10  and over 0 in quantity to running low
         let lowPaints = this.state.paints.filter(paintAmount => paintAmount.quantity > 0  && paintAmount.quantity <= 10 );
         lowPaints.sort();
 
+        // filtering the paints from the array. Directing the paints with 0 quantity to out of stock
         let outStocPaints = this.state.paints.filter(paintAmount => paintAmount.quantity == 0);
         outStocPaints.sort();
+
 
         return (
             <main className='main'>
@@ -85,12 +77,3 @@ export default class Home extends Component {
     }
 }
 
-
-// {this.state.paints.filter(paintAval => paintAval.quantity > 10)
-//     .map(paintAval => (paintAval
-//     <Card
-//         // let avalPaint = ()
-//         arrayPaints={paintAval}
-//         title='Available'
-//     />
-//     ))}

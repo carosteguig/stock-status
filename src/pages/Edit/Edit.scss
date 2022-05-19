@@ -6,13 +6,15 @@
     padding: 4rem 1.5rem 4rem 1.5rem;
     // height: 100vh;
     background-color: $primary__color--second-text;
-
+    @include tablet {
+        padding: 5rem 4rem;
+    }
 
     &__title {
         @include section-header__mobile;
         color: $primary__color--text;
         // text-align: center;
-        padding: 0 0 4rem 0;
+        padding: 0 0 4rem 1.125rem;
     }
 
     &__form {

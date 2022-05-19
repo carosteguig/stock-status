@@ -24,11 +24,13 @@ function App() {
             <Edit {...routerProps} />} 
           />
 
-          <Route 
-            path='/edit/:colour'
+          {/* <Route 
+            path='/edit/:colour' 
             render={(routerProps) =>
             <Edit {...routerProps} />} 
-          />
+          /> */}
+
+          <Route path='/edit/:colour' component={Edit} />
           
         </Switch>
       </Router>
