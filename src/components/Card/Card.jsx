@@ -1,5 +1,7 @@
 import './Card.scss';
 import { Link } from 'react-router-dom';
+import React from 'react';
+import uuid from 'react-uuid';
 
 export default function Card(props) {
 
@@ -18,11 +20,10 @@ export default function Card(props) {
                     </ul>
                     <ul className='card__list card__list--right'>
                         {props.arrayPaints.map(paint => (
-                            <Link to={`/edit/${paint.colour}`}>
-                            <li className='card__item card__item-container' key={paint.id}>
+                            <Link key={uuid()} to={`/edit/${paint.colour}`}>
+                            <li className='card__item card__item-container' key={uuid()}>
                                 <h3>{paint.quantity}</h3>
-                                
-                                    <p className='card__item-button'>edit</p>
+                                <p className='card__item-button'>edit</p>
                                 
                             </li>
                             </Link>

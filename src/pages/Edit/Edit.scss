@@ -1,0 +1,81 @@
+@import '../../styles/partials/mixins';
+@import '../../styles/partials/variables';
+
+
+.edit {
+    padding: 4rem 1.5rem 4rem 1.5rem;
+    // height: 100vh;
+    background-color: $primary__color--second-text;
+
+
+    &__title {
+        @include section-header__mobile;
+        color: $primary__color--text;
+        // text-align: center;
+        padding: 0 0 4rem 0;
+    }
+
+    &__form {
+        padding: 2rem 1.25rem;
+        background-color: $primary__color--bkgd;
+        border-radius: 1.25rem;
+        // under shadow style
+        -webkit-box-shadow: rgba(0, 0, 0, 0.3) 2.4px 2.4px 3.2px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.3) 2.4px 2.4px 3.2px;
+        box-shadow: rgba(0, 0, 0, 0.125) 1px 1px 3.2px;
+
+
+        &-title {
+            @include subheader__mobile;
+            padding-bottom: 1.5rem;
+            color: $primary__color--text;
+        }
+
+        &-content {
+            @include display-flex(column, none, none);
+        }
+
+        &-item {
+            @include display-flex(column, none, none);
+            @include body__mobile;
+            padding-bottom: 1.5rem;   
+            width: 100%;
+        }
+
+        &-input {
+            padding-left: 0.75rem;
+            height: 1.75rem;
+            margin-top: .25rem;
+            border-radius: 0.25rem;
+            outline: none;
+            border: solid 1px $secondary__color--divider;
+
+            &--quantity {
+                width: 7rem;
+            }
+
+            &:active {
+                border: 0.0625rem solid $primary__color--cta-active;
+              }
+        }
+
+        &-btn {
+            @include display-flex(row, flex-end, none);
+
+
+            &-icon {
+                width: 6.5rem;
+                height: 2rem;
+                @include labels-buttons__mobile;
+                font-style: normal;
+                border-radius: 0.5rem;
+                border: none;
+                background-color: $primary__color--text;
+                color: $primary__color--second-text;
+                padding-bottom: 0.25rem;
+            }
+        }
+
+
+    }
+}

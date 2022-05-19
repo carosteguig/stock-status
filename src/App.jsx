@@ -5,9 +5,6 @@ import Home from './pages/Home/Home';
 import Edit from './pages/Edit/Edit';
 
 
-
-
-
 function App() {
   return (
     <>
@@ -18,20 +15,20 @@ function App() {
           <Route 
             path='/' exact 
             render={(routerProps) =>
-            <Home {...routerProps} />
-          } />
+            <Home {...routerProps} />} 
+          />
 
           <Route 
             path='/edit' exact 
             render={(routerProps) =>
-            <Edit {...routerProps} />
-          } />
+            <Edit {...routerProps} />} 
+          />
 
           <Route 
             path='/edit/:colour'
             render={(routerProps) =>
-            <Edit {...routerProps} />
-          } />
+            <Edit {...routerProps} />} 
+          />
           
         </Switch>
       </Router>
